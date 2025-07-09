@@ -1,0 +1,14 @@
+# Object files
+*.o
+
+# Executables
+push_swap
+
+# Backup/editor files (optional)
+*~
+*.swp
+.DS_Store
+
+# folders
+push_swap_tester/
+push_swap_visualizer/
