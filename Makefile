@@ -2,6 +2,7 @@ NAME = push_swap
 
 SRC = main.c \
       handle_errors/check_input.c \
+      handle_errors/check_duplicate.c \
       operations/push.c \
       operations/reverse.c \
       operations/rotate.c \

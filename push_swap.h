@@ -31,6 +31,9 @@ typedef struct s_node
 int		check_param(int ac, char **av);
 int		is_valid_num(int ac, char **av);
 int		is_valid_int(int ac, char **av);
+int		check_duplicate(int ac, char **av);
+int 	cd_plus_arg(char **av);
+int		cd_two_arg(char *av);
 int		ft_count_len(char *s);
 int		count_word(char *s);
 int		fill_dest(char *dest, char *s);

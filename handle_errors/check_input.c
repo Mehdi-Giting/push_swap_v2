@@ -20,7 +20,12 @@ int	check_param(int ac, char **av)
 		return (0);
 	}
 	else if (is_valid_int(ac, av) == 0)
-		{
+	{
+		write(1, "Error\n", 6);
+		return (0);
+	}
+	else if (check_duplicate(ac, av) == 0)
+	{
 		write(1, "Error\n", 6);
 		return (0);
 	}
