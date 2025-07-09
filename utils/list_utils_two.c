@@ -40,3 +40,14 @@ void	add_front(t_node **head, t_node *new_node)
 		*head = new_node;
 	}
 }
+
+void free_stack(t_node *stack)
+{
+	t_node *tmp;
+	while (stack)
+	{
+		tmp = stack;
+		stack = stack->next;
+		free(tmp);
+	}
+}

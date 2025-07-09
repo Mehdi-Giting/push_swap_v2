@@ -58,5 +58,10 @@ void	print_list(t_node **head);
 long	ft_atol(char *s);
 void	add_back(t_node **head, t_node *new_node);
 void	add_front(t_node **head, t_node *new_node);
+void	sort_three(t_node **a);
+int		len_array(char **av);
+t_node	*create_node(int value);
+t_node	*init_stack_a(char **av);
+void 	free_stack(t_node *stack);
 
 #endif
