@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/09 12:18:18 by marvin            #+#    #+#             */
-/*   Updated: 2025/07/09 12:18:18 by marvin           ###   ########.fr       */
+/*   Created: 2025/07/12 00:59:13 by marvin            #+#    #+#             */
+/*   Updated: 2025/07/12 00:59:13 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,7 @@ typedef struct s_node
 {
 	int				value;
 	int				index;
-	int				push_cost;
-	int				above_median;
-	int				cheaped;
 	struct s_node	*next;
-	struct s_node	*prev;
 } t_node;
 
 int		check_param(int ac, char **av);
@@ -63,8 +59,15 @@ void	add_back(t_node **head, t_node *new_node);
 void	add_front(t_node **head, t_node *new_node);
 void	sort_three(t_node **a);
 int		len_array(char **av);
+int		*stack_to_array(t_node *a, int size);
 t_node	*create_node(int value);
 t_node	*init_stack_a(char **av);
 void 	free_stack(t_node *stack);
+void	sort_array(int *arr, int size);
+void	assign_index(t_node **a, int *arr, int size);
+void	array_to_stack(t_node **a);
+int		biggest_index_in_stack(t_node *a);
+int		get_max_bits(int max);
+void	radix_sort(t_node **a, t_node **b);
 
 #endif

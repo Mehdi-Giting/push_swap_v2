@@ -8,11 +8,13 @@ SRC = main.c \
       operations/rotate.c \
       operations/swap.c \
       utils/ft_split.c \
-      utils/list_utils.c\
-      utils/list_utils_two.c\
-      utils/ft_atol.c\
+      utils/list_utils.c \
+      utils/list_utils_two.c \
+      utils/ft_atol.c \
       init_sort_stack/init_stack.c \
       init_sort_stack/sort_three.c \
+      init_sort_stack/indexing.c \
+      init_sort_stack/sort_stack.c \
 
 OBJ = $(SRC:.c=.o)
 

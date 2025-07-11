@@ -82,7 +82,7 @@ void	print_list(t_node **head)
 		return ;
 	while (tmp_node)
 	{
-		printf("num: %i\n", tmp_node->value);
+		printf("num: %i | index: %i\n", tmp_node->value, tmp_node->index);
 		tmp_node = tmp_node->next;
 	}
 }

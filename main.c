@@ -19,8 +19,8 @@ void	sort_stack(t_node **a, t_node **b)
 		sa(a);
 	else if (list_size(a) == 3)
 		sort_three(a);
-	// else
-	// 	sort_list(a, b)
+	else
+		radix_sort(a, b);
 }
 
 int	main(int ac, char **av)
