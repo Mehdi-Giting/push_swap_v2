@@ -20,7 +20,7 @@ void	sort_stack(t_node **a, t_node **b)
 	else if (list_size(a) == 3)
 		sort_three(a);
 	else
-		radix_sort(a, b);
+		chunk_sort(a, b);
 }
 
 int	main(int ac, char **av)

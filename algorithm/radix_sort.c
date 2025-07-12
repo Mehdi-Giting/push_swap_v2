@@ -67,7 +67,6 @@ void	radix_sort(t_node **a, t_node **b)
 			else
 				pb(a, b);
 			j++;
-			size = list_size(a);
 		}
 		while (*b)
 			pa(b, a);

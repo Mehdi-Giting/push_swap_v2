@@ -17,7 +17,9 @@ SRC = \
 	utils/ft_split.c \
 	utils/ft_atol.c \
 	utils/list_utils.c \
-	utils/list_utils_two.c
+	utils/list_utils_two.c \
+	algorithm/chunking_a.c \
+	algorithm/chunking_b.c
 
 OBJ = $(SRC:.c=.o)
 
