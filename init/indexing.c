@@ -65,7 +65,7 @@ void	set_index_from_array(t_node **a, int *arr, int size)
 	while (tmp_node)
 	{
 		i = 0;
-		while(i < size)
+		while (i < size)
 		{
 			if (arr[i] == tmp_node->value)
 			{

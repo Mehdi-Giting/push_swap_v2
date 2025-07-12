@@ -23,14 +23,13 @@ void	reverse_rotate(t_node **head)
 	before_last_node = get_before_last_node(head);
 	before_last_node->next = NULL;
 	last_node->next = (*head);
-	*head = last_node; 
+	*head = last_node;
 }
 
 void	rra(t_node **a)
 {
 	reverse_rotate(a);
 	write(1, "rra\n", 4);
-
 }
 
 void	rrb(t_node **b)

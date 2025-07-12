@@ -19,7 +19,7 @@ int	find_max_index(t_node *b)
 
 	tmp_node = b;
 	max_index = 0;
-	while(tmp_node)
+	while (tmp_node)
 	{
 		if (tmp_node->index > max_index)
 			max_index = tmp_node->index;
@@ -35,7 +35,7 @@ int	position_of_index(t_node *b, int index)
 
 	i = 0;
 	tmp_node = b;
-	while( tmp_node && tmp_node->index != index)
+	while (tmp_node && tmp_node->index != index)
 	{
 		tmp_node = tmp_node->next;
 		i++;
@@ -61,7 +61,7 @@ void	push_back_biggest(t_node **b, t_node **a)
 {
 	int	max_index;
 
-	while(*b)
+	while (*b)
 	{
 		max_index = find_max_index(*b);
 		rotate_b_to_top(b, max_index);

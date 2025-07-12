@@ -15,7 +15,7 @@
 int	list_size(t_node **head)
 {
 	int		i;
-	t_node 	*tmp_node;
+	t_node	*tmp_node;
 
 	i = 0;
 	tmp_node = *head;

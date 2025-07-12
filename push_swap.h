@@ -84,5 +84,4 @@ int		is_sorted(t_node **head);
 void	print_stack(t_node **head);
 void	free_stack(t_node *stack);
 
-// ========================
 #endif

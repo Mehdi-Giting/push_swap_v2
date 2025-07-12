@@ -86,7 +86,7 @@ int	is_valid_int(int ac, char **av)
 	{
 		val = ft_atol(av[i]);
 		if (!(val <= 2147483647 && val >= -2147483648))
-		{	
+		{
 			if (ac == 2)
 				free_split(av);
 			return (0);

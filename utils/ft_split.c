@@ -21,6 +21,7 @@ int	ft_count_len(char *s)
 		len++;
 	return (len);
 }
+
 int	count_word(char *s)
 {
 	int	word;
@@ -96,4 +97,3 @@ char	**ft_split(char *s)
 	dest[i] = NULL;
 	return (dest);
 }
-	

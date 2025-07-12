@@ -14,7 +14,7 @@
 
 void	add_back(t_node **head, t_node *new_node)
 {
-	t_node *tmp_node;
+	t_node	*tmp_node;
 
 	tmp_node = *head;
 	if (*head == NULL)
@@ -29,7 +29,7 @@ void	add_back(t_node **head, t_node *new_node)
 
 void	add_front(t_node **head, t_node *new_node)
 {
-	t_node *tmp_node;
+	t_node	*tmp_node;
 
 	tmp_node = *head;
 	if (*head == NULL)
@@ -41,9 +41,10 @@ void	add_front(t_node **head, t_node *new_node)
 	}
 }
 
-void free_stack(t_node *stack)
+void	free_stack(t_node *stack)
 {
-	t_node *tmp;
+	t_node	*tmp;
+
 	while (stack)
 	{
 		tmp = stack;

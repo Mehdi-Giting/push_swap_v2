@@ -40,7 +40,7 @@ int	handle_double_arg(char *av)
 	return (1);
 }
 
-int handle_plus_args(char **av)
+int	handle_plus_args(char **av)
 {
 	int	i;
 	int	j;
@@ -63,7 +63,7 @@ int handle_plus_args(char **av)
 int	check_duplicate(int ac, char **av)
 {
 	int		res;
-	
+
 	if (ac == 2)
 		res = handle_double_arg(av[1]);
 	else

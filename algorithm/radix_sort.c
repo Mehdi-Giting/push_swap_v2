@@ -40,8 +40,10 @@ int	get_max_index(t_node *a)
 
 int	get_max_bits(int max)
 {
-	int bits = 0;
-	while((max >> bits) != 0)
+	int	bits;
+
+	bits = 0;
+	while ((max >> bits) != 0)
 		bits++;
 	return (bits);
 }
