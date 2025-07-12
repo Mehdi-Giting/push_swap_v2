@@ -12,7 +12,7 @@
 
 #include "../push_swap.h"
 
-int	check_param(int ac, char **av)
+int	check_arguments(int ac, char **av)
 {
 	if (is_valid_num(ac, av) == 0)
 	{
@@ -63,11 +63,11 @@ int	is_valid_num(int ac, char **av)
 	if (is_valid_num_belly(av, ac) == 0)
 	{
 		if (ac == 2)
-			free_dest(av);
+			free_split(av);
 		return (0);
 	}
 	if (ac == 2)
-		free_dest(av);
+		free_split(av);
 	return (1);
 }
 
@@ -88,12 +88,12 @@ int	is_valid_int(int ac, char **av)
 		if (!(val <= 2147483647 && val >= -2147483648))
 		{	
 			if (ac == 2)
-				free_dest(av);
+				free_split(av);
 			return (0);
 		}
 		i++;
 	}
 	if (ac == 2)
-		free_dest(av);
+		free_split(av);
 	return (1);
 }

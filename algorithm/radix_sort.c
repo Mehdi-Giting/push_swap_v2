@@ -12,17 +12,17 @@
 
 #include "../push_swap.h"
 
-void	array_to_stack(t_node **a)
+void	assign_indices(t_node **a)
 {
 	int	*arr;
 
 	arr = stack_to_array(*a, list_size(a));
 	sort_array(arr, list_size(a));
-	assign_index(a, arr, list_size(a));
+	set_index_from_array(a, arr, list_size(a));
 	free(arr);
 }
 
-int	biggest_index_in_stack(t_node *a)
+int	get_max_index(t_node *a)
 {
 	int		max;
 	t_node	*tmp_node;
@@ -53,8 +53,8 @@ void	radix_sort(t_node **a, t_node **b)
 	int		j;
 	int		size;
 
-	array_to_stack(a);
-	max_bits = get_max_bits(biggest_index_in_stack(*a));
+	assign_indices(a);
+	max_bits = get_max_bits(get_max_index(*a));
 	i = 0;
 	size = list_size(a);
 	while (i < max_bits)
@@ -67,6 +67,7 @@ void	radix_sort(t_node **a, t_node **b)
 			else
 				pb(a, b);
 			j++;
+			size = list_size(a);
 		}
 		while (*b)
 			pa(b, a);

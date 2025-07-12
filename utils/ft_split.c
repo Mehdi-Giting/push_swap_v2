@@ -56,7 +56,7 @@ int	fill_dest(char *dest, char *s)
 	return (i);
 }
 
-void	free_dest(char **dest)
+void	free_split(char **dest)
 {
 	int		i;
 
@@ -87,7 +87,7 @@ char	**ft_split(char *s)
 		dest[i] = malloc(sizeof(char) * ft_count_len(s + j) + 1);
 		if (!dest[i])
 		{
-			free_dest(dest);
+			free_split(dest);
 			return (NULL);
 		}
 		j = j + fill_dest(dest[i], s + j);

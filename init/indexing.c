@@ -56,7 +56,7 @@ void	sort_array(int *arr, int size)
 	}
 }
 
-void	assign_index(t_node **a, int *arr, int size)
+void	set_index_from_array(t_node **a, int *arr, int size)
 {
 	t_node	*tmp_node;
 	int		i;

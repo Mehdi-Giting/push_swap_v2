@@ -12,7 +12,7 @@
 
 #include "../push_swap.h"
 
-int	cd_two_arg(char *av)
+int	handle_double_arg(char *av)
 {
 	char	**dest;
 	int		i;
@@ -29,18 +29,18 @@ int	cd_two_arg(char *av)
 		{
 			if (ft_atol(dest[i]) == ft_atol(dest[j]))
 			{
-				free_dest(dest);
+				free_split(dest);
 				return (0);
 			}
 			j++;
 		}
 		i++;
 	}
-	free_dest(dest);
+	free_split(dest);
 	return (1);
 }
 
-int cd_plus_arg(char **av)
+int handle_plus_args(char **av)
 {
 	int	i;
 	int	j;
@@ -65,8 +65,8 @@ int	check_duplicate(int ac, char **av)
 	int		res;
 	
 	if (ac == 2)
-		res = cd_two_arg(av[1]);
+		res = handle_double_arg(av[1]);
 	else
-		res = cd_plus_arg(av + 1);
+		res = handle_plus_args(av + 1);
 	return (res);
 }

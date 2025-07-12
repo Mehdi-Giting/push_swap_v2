@@ -1,38 +1,39 @@
-NAME = push_swap
+NAME    = push_swap
+CC      = gcc
+CFLAGS  = -Wall -Wextra -Werror -I.
 
-SRC = main.c \
-      handle_errors/check_input.c \
-      handle_errors/check_duplicate.c \
-      operations/push.c \
-      operations/reverse.c \
-      operations/rotate.c \
-      operations/swap.c \
-      utils/ft_split.c \
-      utils/list_utils.c \
-      utils/list_utils_two.c \
-      utils/ft_atol.c \
-      init_sort_stack/init_stack.c \
-      init_sort_stack/sort_three.c \
-      init_sort_stack/indexing.c \
-      init_sort_stack/sort_stack.c \
+SRC = \
+	main.c \
+	input/check_input.c \
+	input/check_duplicate.c \
+	init/init_stack.c \
+	init/indexing.c \
+	algorithm/sort_three.c \
+	algorithm/radix_sort.c \
+	operations/push.c \
+	operations/swap.c \
+	operations/rotate.c \
+	operations/reverse.c \
+	utils/ft_split.c \
+	utils/ft_atol.c \
+	utils/list_utils.c \
+	utils/list_utils_two.c
 
 OBJ = $(SRC:.c=.o)
 
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror -Iinclude
-RM = rm -f
-
-# Rules
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
 clean:
-	$(RM) $(OBJ)
+	rm -f $(OBJ)
 
 fclean: clean
-	$(RM) $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 

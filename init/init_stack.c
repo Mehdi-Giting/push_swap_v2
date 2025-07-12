@@ -34,7 +34,7 @@ t_node	*create_node(int value)
 	return (new_node);
 }
 
-t_node	*init_stack_a(char **av)
+t_node	*init_stack(char **av)
 {
 	t_node	*head;
 	t_node	*new_node;

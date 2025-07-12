@@ -73,7 +73,7 @@ int	is_sorted(t_node **head)
 	return (1);
 }
 
-void	print_list(t_node **head)
+void	print_stack(t_node **head)
 {
 	t_node	*tmp_node;
 

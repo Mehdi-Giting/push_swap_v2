@@ -32,20 +32,20 @@ int	main(int ac, char **av)
 	b = NULL;
 	if (ac < 2 || !av[1][0])
 		return (1);
-	else if (check_param(ac, av) == 0)
+	else if (check_arguments(ac, av) == 0)
 		return (1);
 	if (ac == 2)
 	{
 		av = ft_split(av[1]);
-		a = init_stack_a(av);
+		a = init_stack(av);
 	}
 	else
-		a = init_stack_a(av + 1);
+		a = init_stack(av + 1);
 	if (is_sorted(&a) == 0)
 		sort_stack(&a, &b);
-	print_list(&a);
+	print_stack(&a);
 	if (ac == 2)
-		free_dest(av);
+		free_split(av);
 	free_stack(a);
 	return (0);
 }
