@@ -8,7 +8,7 @@ SRC = \
 	input/check_duplicate.c \
 	init/init_stack.c \
 	init/indexing.c \
-	algorithm/sort_three.c \
+	algorithm/sort_three_to_five.c \
 	algorithm/radix_sort.c \
 	operations/push.c \
 	operations/swap.c \

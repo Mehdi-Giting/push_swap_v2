@@ -16,17 +16,17 @@ int	check_arguments(int ac, char **av)
 {
 	if (is_valid_num(ac, av) == 0)
 	{
-		write(1, "Error\n", 6);
+		write(2, "Error\n", 6);
 		return (0);
 	}
 	else if (is_valid_int(ac, av) == 0)
 	{
-		write(1, "Error\n", 6);
+		write(2, "Error\n", 6);
 		return (0);
 	}
 	else if (check_duplicate(ac, av) == 0)
 	{
-		write(1, "Error\n", 6);
+		write(2, "Error\n", 6);
 		return (0);
 	}
 	return (1);

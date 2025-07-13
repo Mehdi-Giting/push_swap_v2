@@ -38,6 +38,7 @@ void	sort_array(int *arr, int size);
 void	set_index_from_array(t_node **a, int *arr, int size);
 
 void	sort_three(t_node **a);
+void	sort_five(t_node **a, t_node **b);
 void	radix_sort(t_node **a, t_node **b);
 int		biggest_index_in_stack(t_node *a);
 int		get_max_bits(int max);
@@ -73,6 +74,7 @@ void	push_back_biggest(t_node **b, t_node **a);
 int		exists_in_chunk(t_node *a, int lower, int upper);
 void	rotate_a_to_top(t_node **a, int index);
 int		find_next_member_chunk_in_a(t_node *a, int lower, int upper);
+int		min_index(t_node *a);
 void	push_one_chunk(t_node **a, t_node **b, int lower, int upper);
 void	chunk_sort(t_node **a, t_node **b);
 

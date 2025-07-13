@@ -19,6 +19,8 @@ void	sort_stack(t_node **a, t_node **b)
 		sa(a);
 	else if (list_size(a) == 3)
 		sort_three(a);
+	else if (list_size(a) <= 5)
+		sort_five(a, b);
 	else
 		chunk_sort(a, b);
 }
@@ -43,7 +45,6 @@ int	main(int ac, char **av)
 		a = init_stack(av + 1);
 	if (is_sorted(&a) == 0)
 		sort_stack(&a, &b);
-	print_stack(&a);
 	if (ac == 2)
 		free_split(av);
 	free_stack(a);
